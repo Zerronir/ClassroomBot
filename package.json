@@ -1,0 +1,16 @@
+{
+  "name": "botproject",
+  "version": "1.0.0",
+  "description": "Bot creado por Raúl y Pedro, alumnos de segundo del grado superior de diseño de aplicaciones web",
+  "main": "botApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Raúl García-Verdugo Cardador, Pedro Jorge Ribeiro Batista",
+  "license": "ISC",
+  "dependencies": {
+    "discord": "^0.8.2",
+    "discord.js": "^12.3.1"
+  }
+}

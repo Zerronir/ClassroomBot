@@ -45,4 +45,4 @@ client.on('message', msg => {
 
 
 // Creamos una función para que el bot inicie sesión donde le pasaremos el token generado por discord para el bot
-client.login('NzY0MDc2Njg1MjYzMjQxMjM2.X4A_3Q.rZA7trZsVO8GiTNH8mAUpS4Mwjc');
+client.login('INSERT_TOKEN');

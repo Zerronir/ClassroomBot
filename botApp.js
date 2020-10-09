@@ -1,7 +1,6 @@
 /**
  * Importamos las librerías que necesitamos para hacer funcionar el proyecto
  * Discord.js -> para poder acceder a Discord con el bot y leer los comandos que le pasamos al bot
- *
  **/
 
 const discord = require('discord.js');
@@ -18,8 +17,8 @@ client.on('ready', () => {
  *
  * Por ejemplo, si la asignatura es Entorno Cliente, el bot contestará con un mensaje del profesor de esa asignatura.
  * @msg --> Es el objeto que contiene nuestro mensaje.
- *
- *
+ * @msg.content.author --> Autor del mensaje
+ * @msg.content --> Contenido del mensaje
  **/
 
 client.on('message', msg => {

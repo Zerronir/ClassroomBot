@@ -25,7 +25,7 @@ client.on('ready', () => {
 client.on('message', msg => {
     // Comando para listar una array con todos los comandos y lo que hace cada bot
     if(msg.content === '!comandos'){
-        let coms = ['!tareas --> Lista todas las tareas pendientes', '!ayuda --> Te da un listado de los comandos y como usarlos', '!comentarPrivado --> te permite comentar una tarea de forma privada', '!comentar --> Te permite hacer un comentario público en el muro de la clase'];
+        let coms = ['!tareas --> Lista todas las tareas pendientes', '!ayuda --> Te da un listado de los comandos y como usarlos', '!comentarPrivado --> te permite comentar una tarea de forma privada', '!comentario --> Te permite hacer un comentario público en el muro de la clase'];
 
         // Creamos un bucle para recorrer la array de comandos disponibles y pintarlos como mensajes
         for (let i = 0; i < coms.length; i++) {
@@ -36,6 +36,18 @@ client.on('message', msg => {
 
     if(msg.content === '!help' || msg.content === '!ayuda'){
         msg.reply('Para poder ejecutar los comandos !tareas, !comentarPrivado y !comentar tienes que dar acceso a tu cuenta de google a la api de classroom adjuntando tu correo electrónico en tu mensaje, por ejemplo: << !comentar "Mensaje para la clase." correo@alumno.es >>');
+    }
+
+    if(msg.content.startsWith("!comentario", 0)){
+
+        // Usamos el método split para poder sacar lo que hay dentro de las comillas como mensaje público para el classroom
+        let comentario = msg.content.split('"')[1];
+
+        msg.reply("Mensaje enviado correctamente: " + comentario);
+    }
+
+    if(msg.content === '!comentarPrivado'){
+        msg.reply("Mensaje privado enviado");
     }
 
 
